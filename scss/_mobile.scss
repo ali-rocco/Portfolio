@@ -1,0 +1,64 @@
+/* @media(max-width: 1150px) {
+    .showcase-content {
+       h2 {
+        align-self: center;
+        padding-bottom: 10rem;
+       }
+    }
+} */
+
+@media(max-width: 1150px) {
+
+    .showcase {
+            nav {
+        
+                ul {
+                    
+                    li {
+                        padding: 2rem 0.7rem;
+                        font-size: 1.8rem;
+                        font-weight: 900;
+                    }
+                }
+            } 
+        }
+
+    main {
+        .showcase-content {
+            h1 {
+                text-align: center;
+                font-size: 2.2rem;
+                padding-bottom: 7rem;
+            }
+
+            .logo {
+                float: none;
+                text-align: center;
+
+                h2 {
+                    left: 0rem;
+                    font-size: 2rem;
+                }
+
+                }
+                
+                p {
+                    float: none;
+                    width: 100%;
+                    padding: 5rem 0rem 5rem 0;
+                }
+
+            }
+
+            .boxes {
+                display: block;
+                margin: 2rem 1rem 5rem;
+                border-radius: 1rem;
+                padding: 1rem;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+
+    }
