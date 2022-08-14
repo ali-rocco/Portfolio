@@ -1,0 +1,239 @@
+.menu-btn {
+  position: fixed;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.menu-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #fff;
+}
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  display: none;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+}
+.menu.show {
+  visibility: visible;
+}
+.menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  width: 30%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: #323232;
+  list-style: none;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+}
+.menu-nav.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu .nav-item {
+  transform: translate3d(600px, 0, 0);
+  transition: all 0.3s ease-out;
+}
+.menu .nav-item.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu .nav-item.current > a {
+  color: #f8b400;
+}
+.menu .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+.menu .nav-link:hover {
+  color: #f8b400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  margin: 0;
+  height: 100%;
+  background-color: #444;
+  /*     overflow-y: hidden; */
+}
+body#bg-img {
+  background: url(img/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+body#bg-img .overlay:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(68, 68, 68, 0.85);
+  padding-bottom: 100px;
+}
+
+main {
+  height: 100%;
+  padding: 80px;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 100px;
+  color: #fff;
+  font-size: 2rem;
+}
+.brand span {
+  color: #f8b400;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.showcase p {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0px 30px 0 70px;
+  align-self: center;
+}
+.showcase img {
+  width: 200px;
+  height: auto;
+  border: 2px solid #f8b400;
+  border-radius: 50%;
+}
+
+.icons {
+  margin-top: 10rem;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #f8b400;
+  border-radius: 20px;
+}
+.icons .icon:hover {
+  color: #f8b400;
+  transition: all 0.3s ease-out;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+}
+.contacts a {
+  padding: 0px 10px 30px;
+  color: #fff;
+}
+.contacts :hover {
+  color: #f8b400;
+  transition: all 0.3s ease-out;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.projects .project {
+  border: 2px solid #f8b400;
+  border-radius: 10px;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+.projects h3 {
+  text-align: center;
+}
+.projects img {
+  width: 200px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.projects a {
+  text-decoration: none;
+  color: #fff;
+}
+.projects a:hover {
+  font-size: 99.5%;
+  color: #f8b400;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 1171px) {
+  main {
+    padding: 150px;
+  }
+  main h2 {
+    text-align: center;
+  }
+  .icons {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+  .showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .showcase p {
+    padding: 30px 10px 0 10px;
+    align-self: center;
+  }
+  .icons {
+    margin-top: 2rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #f8b400;
+    border-radius: 20px;
+  }
+  .menu-nav {
+    width: 100%;
+  }
+}
