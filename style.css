@@ -108,7 +108,7 @@ body {
   /* overflow-y: hidden; */
 }
 body#bg-img {
-  background: url(/img/background.jpg);
+  background: url(img/background.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
