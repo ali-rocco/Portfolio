@@ -106,7 +106,7 @@ body#bg-img .overlay:after {
   height: 100%;
   z-index: -1;
   background: rgba(68, 68, 68, 0.85);
-  padding-bottom: 300px;
+  padding-bottom: 200px;
 }
 
 main {
